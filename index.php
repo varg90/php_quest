@@ -6,8 +6,8 @@
 </head>
 <body>
 <?php
-    $controller = new products_controller;
-    echo $controller->index();
+    $controller = new ProductsController;
+    echo $controller->productsList();
 ?>
 </body>
 </html>

@@ -1,13 +1,13 @@
 <?php
-class model
+class Model
 {
     protected $_db;
-    private $_config = [
+    private $_config = array(
         'host' => '127.0.0.1',
         'db' => 'php_quest',
         'user' => 'root',
         'password' => ''
-    ];
+    );
 
     public function __construct()
     {

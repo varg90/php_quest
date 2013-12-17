@@ -1,5 +1,5 @@
 <?php
-class product_model extends model
+class ProductModel extends Model
 {
     protected $_table = 'product';
     protected $_id;
@@ -33,10 +33,11 @@ class product_model extends model
 
     public function get_all()
     {
-        $products = [];
+        $products = array();
         foreach ($this->_db->query('SELECT * FROM ' . $this->_table) as $row) {
             $products[] = $row;
         }
+//        echo "<pre>" . print_r($products, true) . "</pre>"; die;
         return $products;
     }
 }
