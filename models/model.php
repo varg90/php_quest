@@ -1,6 +1,7 @@
 <?php
 class model
 {
+    protected $_db;
     private $_config = [
         'host' => '127.0.0.1',
         'db' => 'php_quest',
@@ -10,7 +11,7 @@ class model
 
     public function __construct()
     {
-        $dbh = new PDO(
+        $this->_db = new PDO(
             'mysql:host=' . $this->_config['host'] . ';dbname=' . $this->_config['db'],
             $this->_config['user'],
             $this->_config['password']
