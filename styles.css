@@ -1,4 +1,6 @@
 .center-with-border {
+    width: 70%;
+    margin: 0 auto;
     text-align: center;
     border: 2px solid;
     border-collapse: collapse;

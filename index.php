@@ -10,6 +10,7 @@
 $controller = new ProductsController;
 $products = $controller->productsList();
 ?>
+<button><a href="add.php">Add Product</a></button>
 <table class="center-with-border">
     <?php foreach ($products as $product) : ?>
         <tr>
