@@ -1,5 +1,5 @@
 <?php
-class product_model
+class product_model extends model
 {
 	protected $_id;
 	protected $_name;
@@ -29,4 +29,9 @@ class product_model
 	{
 		return $this->_cost;
 	}
+
+    public function get_all()
+    {
+
+    }
 }
