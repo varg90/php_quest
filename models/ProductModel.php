@@ -6,32 +6,32 @@ class ProductModel extends Model
     protected $_name;
     protected $_cost;
 
-    public function get_id()
+    public function getId()
     {
         return $this->_id;
     }
 
-    public function set_name($name)
+    public function setName($name)
     {
         $this->_name = $name;
     }
 
-    public function get_name()
+    public function getName()
     {
         return $this->_name;
     }
 
-    public function set_cost($cost)
+    public function setCost($cost)
     {
         $this->_cost = $cost;
     }
 
-    public function get_cost()
+    public function getCost()
     {
         return $this->_cost;
     }
 
-    public function get_all()
+    public function getAll()
     {
         $products = array();
         foreach ($this->_db->query('SELECT * FROM ' . $this->_table) as $row) {
