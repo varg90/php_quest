@@ -1,31 +1,28 @@
-<?php include_once(__DIR__ . '/include.php'); ?>
+<? include_once(__DIR__ . '/include.php'); ?>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Add Product</title>
 </head>
 <body>
-<?php
+<?
 $controller = new ProductController();
 $controller->add();
 ?>
-<form name="add" method="POST" action="">
+<form name="add" method="POST" action="<?= $_SERVER["PHP_SELF"] ?>">
     <p>
-        <label>
-            <input type="text" name="name" id="product-name-field">
-        </label>
+        <label for="product-name-field">Product Name:</label>
+        <input type="text" name="name" id="product-name-field">
+
     </p>
 
     <p>
-        <label>
-            <input type="text" name="cost" id="product-cost-field">
-        </label>
+        <label for="product-cost-field">Product Cost:</label>
+        <input type="text" name="cost" id="product-cost-field">
     </p>
 
     <p>
-        <label>
-            <input type="submit" name="submit" class="submit-btn">
-        </label>
+        <input type="submit" name="submit" class="submit-btn">
     </p>
 </form>
 </body>

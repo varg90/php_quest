@@ -1,4 +1,4 @@
-<?php include_once(__DIR__ . '/include.php'); ?>
+<? include_once(__DIR__ . '/include.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,18 +6,18 @@
     <title>Products</title>
 </head>
 <body>
-<?php
+<?
 $controller = new ProductController;
 $products = $controller->index();
 ?>
-<button><a href="add.php">Add Product</a></button>
+<button onclick="location.href='add.php'">Add Product</button>
 <table class="center-with-border">
-    <?php foreach ($products as $product) : ?>
+    <? foreach ($products as $product) : ?>
         <tr>
-            <td><?php echo $product['name'] ?></td>
-            <td><?php echo $product['cost'] ?></td>
+            <td><?= $product['name'] ?></td>
+            <td><?= $product['cost'] ?></td>
         </tr>
-    <?php endforeach; ?>
+    <? endforeach; ?>
 </table>
 </body>
 </html>

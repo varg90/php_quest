@@ -1,4 +1,4 @@
-<?php
+<?
 class ProductModel extends Model
 {
     protected $table = 'product';
@@ -37,7 +37,6 @@ class ProductModel extends Model
         foreach ($this->db->query('SELECT * FROM ' . $this->table) as $row) {
             $products[] = $row;
         }
-//        echo "<pre>" . print_r($products, true) . "</pre>"; die;
         return $products;
     }
 }
