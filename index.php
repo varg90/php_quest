@@ -7,8 +7,8 @@
 </head>
 <body>
 <?php
-$controller = new ProductsController;
-$products = $controller->productsList();
+$controller = new ProductController;
+$products = $controller->index();
 ?>
 <button><a href="add.php">Add Product</a></button>
 <table class="center-with-border">

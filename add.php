@@ -6,8 +6,8 @@
 </head>
 <body>
 <?php
-$controller = new ProductsController();
-$controller->addProduct();
+$controller = new ProductController();
+$controller->add();
 ?>
 <form name="add" method="POST" action="">
     <p>

@@ -1,40 +1,40 @@
 <?php
 class ProductModel extends Model
 {
-    protected $_table = 'product';
-    protected $_id;
-    protected $_name;
-    protected $_cost;
+    protected $table = 'product';
+    protected $id;
+    protected $name;
+    protected $cost;
 
     public function getId()
     {
-        return $this->_id;
+        return $this->id;
     }
 
     public function setName($name)
     {
-        $this->_name = $name;
+        $this->name = $name;
     }
 
     public function getName()
     {
-        return $this->_name;
+        return $this->name;
     }
 
     public function setCost($cost)
     {
-        $this->_cost = $cost;
+        $this->cost = $cost;
     }
 
     public function getCost()
     {
-        return $this->_cost;
+        return $this->cost;
     }
 
     public function getAll()
     {
         $products = array();
-        foreach ($this->_db->query('SELECT * FROM ' . $this->_table) as $row) {
+        foreach ($this->db->query('SELECT * FROM ' . $this->table) as $row) {
             $products[] = $row;
         }
 //        echo "<pre>" . print_r($products, true) . "</pre>"; die;

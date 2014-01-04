@@ -1,13 +1,17 @@
 <?php
-class ProductsController
+class ProductController
 {
     /*
      * @return array
      */
-    public function productsList()
+    public function index()
     {
         $product = new ProductModel();
         $products = $product->getAll();
         return $products;
+    }
+
+    public function add(){
+        
     }
 }
